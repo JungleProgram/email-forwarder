@@ -17,6 +17,7 @@
   "homepage": "https://github.com/JungleProgram/email-forwarder#readme",
   "dependencies": {
     "airtable": "^0.5.10",
-    "aws-sdk": "^2.437.0"
+    "aws-sdk": "^2.437.0",
+    "dotenv": "^7.0.0"
   }
 }
