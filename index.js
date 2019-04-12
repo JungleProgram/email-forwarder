@@ -14,8 +14,6 @@ exports.handler = function(event, context) {
     // Extract the first member of the email address
     var msgInfo = JSON.parse(event.Records[0].Sns.Message);
     var originalEmail = msgInfo.mail.commonHeaders.to[0];
-
-    // var originalEmail = 'louis.rouffineau@jungleprogram.org';
     username = originalEmail.substring(0, originalEmail.indexOf("@"));
 
     // Look for the member with its username
@@ -40,7 +38,10 @@ exports.handler = function(event, context) {
             context.succeed();
         }
 
-        var email = msgInfo.content, headers = "From: 'Jungle Program' <"+forwardFrom+">\r\n";
+        // Extract sender name
+        var senderName = msgInfo.mail.commonHeaders.from[0].substring(0, msgInfo.mail.commonHeaders.from[0].indexOf(" <"));
+
+        var email = msgInfo.content, headers = "From: "+senderName+" <"+forwardFrom+">\r\n";
         headers += "Reply-To: "+msgInfo.mail.commonHeaders.from[0]+"\r\n";
         headers += "X-Original-To: "+msgInfo.mail.commonHeaders.to[0]+"\r\n";
         headers += "To: "+forwardTo+"\r\n";
