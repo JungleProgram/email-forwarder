@@ -5,6 +5,10 @@ require('dotenv').config()
 var forwardFrom = process.env.FROM_ADDRESS;
 var forwardTo = process.env.TO_ADDRESS;
 
+exports.test = function () {
+  console.log('test');
+};
+
 exports.handler = function(event, context) {
     
     // Airtable init
