@@ -67,3 +67,6 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Test JSON data
+test_data.json
