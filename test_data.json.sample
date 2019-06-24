@@ -1,9 +1,18 @@
 {
-  "returnPath": "real_sender@domain.com",
-  "from": ["Sender <user@domain.com>"],
-  "date": "Mon, 24 Jun 2019 13:37:00 +0000",
-  "to": ["recipient1@domain.com", "recipient2@domain.com"],
-  "cc": ["recipient3@domain.com", "recipient4@domain.com", "recipient1@domain.com"],
-  "messageId": "<b8b0df19-626a-456f-a57f-0dedcbe5d422domain.com>",
-  "subject": "Test"
+  "mail": {
+    "commonHeaders": {
+      "returnPath": "real_sender@domain.com",
+      "from": ["Sender <user@domain.com>"],
+      "date": "Mon, 24 Jun 2019 13:37:00 +0000",
+      "to": ["recipient1@domain.com", "recipient2@domain.com"],
+      "cc": ["recipient3@domain.com", "recipient4@domain.com", "recipient1@domain.com"],
+      "messageId": "<b8b0df19-626a-456f-a57f-0dedcbe5d422domain.com>",
+      "subject": "Test"
+    }
+  },
+  "receipt": {
+    "recipients": [
+      "test@test.com"
+    ]
+  }
 }
